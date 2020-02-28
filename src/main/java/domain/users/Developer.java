@@ -1,7 +1,7 @@
 package domain.users;
 
-public class Developer extends Person {
-    protected Developer(String name, String email, String slack) {
-        super(name, email, slack);
+public class Developer extends User {
+    protected Developer(String name) {
+        super(name);
     }
 }

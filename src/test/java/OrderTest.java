@@ -1,11 +1,16 @@
+import domain.users.MailAdapter;
+import domain.users.NotifyService;
+
 class OrderTest {
 
-	Testclass nd = new Testclass();
 
-
-//	//MovieTicket mtn = new MovieTicket(ms,false,1,1);
+	//	//MovieTicket mtn = new MovieTicket(ms,false,1,1);
 //	@Test
+	void test() {
+		NotifyService nf = new MailAdapter();
 
+	}
+}
 //	@Test
 //	void studentPremium() {
 //		Order premiumstudent = new Order(1,true);

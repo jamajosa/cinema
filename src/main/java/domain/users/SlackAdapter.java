@@ -1,12 +1,15 @@
 package domain.users;
 
 public class SlackAdapter implements NotifyService {
-
-    private String notification;
+    private String slackaccount;
+    private SlackService ss;
 
     @Override
-    public void update(String notification)
+    public void notify(String notification)
     {
-        SlackAdaptee.print(notification);
+        ss.print(notification , this.slackaccount);
+    }
+    public void setCredentials(String slack){
+        this.slackaccount = slack;
     }
 }
