@@ -5,6 +5,6 @@ public class PDFAdapter implements Exporter {
 
     @Override
     public void export() {
-        System.out.println("Exported with PDF.");
+        exporter.exprt();
     }
 }

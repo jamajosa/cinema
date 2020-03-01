@@ -1,5 +1,9 @@
 package domain.pipeline;
 
+import domain.reporting.BuildResult;
+
+import java.util.List;
+
 public class Pipeline {
     private SourceStrategy source;
     private AnalyseStrategy analyse;
@@ -9,7 +13,7 @@ public class Pipeline {
     private DeployStrategy deploy;
     private UtilityStrategy utillity;
 
-    //private List<Buildresult> builds;
+    private List<BuildResult> builds;
 
     public void setPipelineSettings(SourceStrategy s,AnalyseStrategy a,PackageStrategy p,BuildStrategy b,TestStrategy t,DeployStrategy d,UtilityStrategy u){
         this.analyse=a;
@@ -21,7 +25,7 @@ public class Pipeline {
         this.utillity=u;
     }
 
-    public final void runPipeline(){
+    public final BuildResult runPipeline(){
         runsources();
         runAnalyses();
         runPackages();
@@ -29,6 +33,7 @@ public class Pipeline {
         runTest();
         deploy();
         runUtils();
+        return new BuildResult();
     }
     public void runsources(){}
     public void runAnalyses(){}

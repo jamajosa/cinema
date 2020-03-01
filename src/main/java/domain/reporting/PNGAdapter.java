@@ -5,6 +5,6 @@ public class PNGAdapter implements Exporter {
 
     @Override
     public void export() {
-        System.out.println("Exported with PNG.");
+        exporter.exportNow();
     }
 }
