@@ -35,11 +35,25 @@ public class Pipeline {
         runUtils();
         return new BuildResult();
     }
-    public void runsources(){}
-    public void runAnalyses(){}
-    public void runPackages(){}
-    public void runBuild(){}
-    public void runTest(){}
-    public void deploy(){}
-    public void runUtils(){}
+    public void runsources(){
+        source.run();
+    }
+    public void runAnalyses(){
+        analyse.run();
+    }
+    public void runPackages(){
+        packages.run();
+    }
+    public void runBuild(){
+        build.run();
+    }
+    public void runTest(){
+        test.run();
+    }
+    public void deploy(){
+        deploy.run();
+    }
+    public void runUtils(){
+        utillity.run();
+    }
 }
