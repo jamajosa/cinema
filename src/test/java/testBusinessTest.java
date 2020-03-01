@@ -2,6 +2,8 @@ import domain.backlog.BacklogItem;
 import domain.backlog.Doing;
 import domain.backlog.Done;
 import domain.backlog.ToDo;
+import domain.pipeline.*;
+import domain.reporting.BuildResult;
 import domain.user.MailAdapter;
 import domain.user.NotifyService;
 import domain.user.*;
@@ -36,6 +38,24 @@ class testBusinessTest {
 
 		backlogitem.setCurrentPhase(new Done());
 		Assertions.assertEquals(backlogitem.getCurrentPhase() instanceof Done, true);
+	}
+
+	@Test
+	void PipelineRuns() {
+		Pipeline pl = new Pipeline();
+		pl.setPipelineSettings(
+				new GithubAdapter(),
+				new NoAnalysis(),
+				new NoPackages(),
+				new AntAdapter(),
+				new NUnitAdapter(),
+				new AzureAdapter(),
+				new NoUtility()
+		);
+
+		BuildResult build = pl.runPipeline();
+		Assertions.assertEquals(build instanceof BuildResult, true);
+		Assertions.assertEquals(build.isStatus(), true);
 	}
 }
 

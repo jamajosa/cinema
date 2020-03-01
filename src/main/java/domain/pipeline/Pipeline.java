@@ -34,7 +34,7 @@ public class Pipeline {
         deploy();
         runUtils();
         BuildResult br =  new BuildResult();
-        this.builds.add(br);
+        //this.builds.add(br);
         return br;
     }
     public void runsources(){
