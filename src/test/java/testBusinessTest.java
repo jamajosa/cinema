@@ -53,7 +53,7 @@ class testBusinessTest {
 	}
 
 	@Test
-	void PipelineRuns() {
+	void PipelineRunsTest() {
 		Pipeline pl = new Pipeline();
 		pl.setPipelineSettings(
 				new GithubAdapter(),
