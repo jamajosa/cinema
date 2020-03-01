@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class testBusinesstest {
 
 	@Test
-	void DoesTheStatesChange() {
+	void DoesTheStatesChangeTest() {
 		Userfactory factory = new Userfactory();
 		User user = factory.makeUser("D","Richard");
 		NotifyService n = new MailAdapter();
