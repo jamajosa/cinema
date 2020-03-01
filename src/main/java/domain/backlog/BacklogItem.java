@@ -19,9 +19,33 @@ public class BacklogItem extends Task{
 //        threads.add(t);
 //    }
     public void publish(){
-        if(this.completed == true) {
+        if(this.completed) {
             publisher.notifySubscribers("Backlogitem completed");
             //done
         }
+    }
+
+    public List<Task> getActivities() {
+        return activities;
+    }
+
+    public void setActivities(List<Task> activities) {
+        this.activities = activities;
+    }
+
+    public Phase getCurrentPhase() {
+        return currentPhase;
+    }
+
+    public void setCurrentPhase(Phase currentPhase) {
+        this.currentPhase = currentPhase;
+    }
+
+    public Publisher getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(Publisher publisher) {
+        this.publisher = publisher;
     }
 }
