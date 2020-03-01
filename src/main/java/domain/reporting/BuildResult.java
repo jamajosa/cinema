@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class BuildResult {
 
 
-    private boolean status;
+    private boolean status = true;
     private LocalDateTime time;
     private String details;
     public boolean isStatus() {

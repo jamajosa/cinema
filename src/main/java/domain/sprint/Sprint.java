@@ -23,6 +23,10 @@ public class Sprint extends Backlog {
 
     public void runPipeline(){
         BuildResult br = pipeline.runPipeline();
+        if(br.isStatus()){
+            Released r = new Released();
+            this.setState(r);
+        }
     }
     public void setState(Stadia state) {
         this.state = state;
