@@ -1,4 +1,4 @@
-package domain.users;
+package domain.user;
 
 public interface NotifyService {
      void notify(String notification);

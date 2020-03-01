@@ -1,14 +1,18 @@
-package domain.users;
+package domain.user;
 
 import java.util.List;
 
-public abstract class User implements Notify {
+public abstract class User implements Subscriber{
     private String name;
 
     List<NotifyService> notificationMedium;
 
     public User(String name) {
         this.name = name;
+    }
+
+    public void Update(String msg){
+        notify(msg);
     }
 
     public void notify(String notification){

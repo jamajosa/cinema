@@ -1,5 +1,5 @@
-import domain.users.MailAdapter;
-import domain.users.NotifyService;
+import domain.user.MailAdapter;
+import domain.user.NotifyService;
 
 class OrderTest {
 

@@ -1,4 +1,4 @@
-package domain.users;
+package domain.user;
 
 public class SlackAdapter implements NotifyService {
     private String slackaccount;

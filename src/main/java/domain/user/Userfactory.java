@@ -1,4 +1,4 @@
-package domain.users;
+package domain.user;
 
 public class Userfactory {
     public User makeUser(String userType,String name){

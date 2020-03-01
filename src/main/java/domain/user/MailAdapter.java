@@ -1,4 +1,4 @@
-package domain.users;
+package domain.user;
 
 public class MailAdapter implements NotifyService {
     private String email;

@@ -1,4 +1,4 @@
-package domain.users;
+package domain.user;
 
 public class ProductOwner extends User {
     public ProductOwner(String name) {
