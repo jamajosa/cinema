@@ -1,8 +1,8 @@
 package domain.user;
 
 public class MailAdapter implements NotifyService {
-    private String email;
-    private MailService ms;
+    private String email = new String();
+    private MailService ms = new MailService();
 
     public void setCredentials (String email)
     {

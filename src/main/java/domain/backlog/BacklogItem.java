@@ -1,12 +1,14 @@
 package domain.backlog;
 import domain.user.*;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class BacklogItem extends Task{
-    private List<Task> activities;
+    private ArrayList<Task> activities = new ArrayList<Task>();
     private Phase currentPhase = new ToDo();
-    private List<Thread> threads;
-    private Publisher publisher;
+    private ArrayList<Thread> threads = new ArrayList<Thread>();
+    private Publisher publisher= new Publisher();
 
     public void addActivity(Task t){
         activities.add(t);
@@ -29,7 +31,7 @@ public class BacklogItem extends Task{
         return activities;
     }
 
-    public void setActivities(List<Task> activities) {
+    public void setActivities(ArrayList<Task> activities) {
         this.activities = activities;
     }
 

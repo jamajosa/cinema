@@ -3,7 +3,7 @@ package domain.backlog;
 import domain.user.*;
 
 public class Task {
-    protected String text;
+    protected String text = new String();
     protected User developer;
     protected boolean completed = false;
 

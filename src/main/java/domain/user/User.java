@@ -1,11 +1,12 @@
 package domain.user;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class User implements Subscriber{
     private String name;
 
-    List<NotifyService> notificationMedium;
+    private ArrayList<NotifyService> notificationMedium = new ArrayList<NotifyService>();
 
     public User(String name) {
         this.name = name;
