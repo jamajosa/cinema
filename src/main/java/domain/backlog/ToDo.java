@@ -1,7 +1,7 @@
 package domain.backlog;
 
 public class ToDo implements Phase {
-    private BacklogItem context = new BacklogItem();
+    private BacklogItem context;
 
     @Override
     public void nextPhase() {

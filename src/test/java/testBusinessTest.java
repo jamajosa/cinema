@@ -14,10 +14,14 @@ class testBusinessTest {
 	void DoesTheStatesChangeTest() {
 		Userfactory factory = new Userfactory();
 		User user = factory.makeUser("D","Richard");
+		User user2 = factory.makeUser("S","Olaf");
+		NotifyService a = new MailAdapter();
 		NotifyService n = new MailAdapter();
+		a.setCredentials("username");
 		n.setCredentials("email@email.nl");
 		user.addNotifyMedium(n);
 		Assertions.assertEquals(n.notify("Hello"), "Hello email@email.nl");
+		Assertions.assertEquals(n.notify("Hello"), "slack : Hello for username");
 	}
 
 	@Test
