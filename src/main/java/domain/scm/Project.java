@@ -21,7 +21,7 @@ public class Project {
         this.pipelines.remove(newPipeline);
     }
 
-    // Team.
+    // Team
     public void addTeamMember(User newUser){
         this.team.add(newUser);
     }
