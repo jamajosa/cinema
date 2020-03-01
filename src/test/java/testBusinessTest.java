@@ -15,6 +15,5 @@ class testBusinessTest {
 		user.addNotifyMedium(n);
 		Assertions.assertEquals(n.notify("Hello"), "Hello email@email.nl");
 	}
-	//t
 }
 
