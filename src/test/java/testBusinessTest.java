@@ -15,13 +15,14 @@ class testBusinessTest {
 		Userfactory factory = new Userfactory();
 		User user = factory.makeUser("D","Richard");
 		User user2 = factory.makeUser("S","Olaf");
-		NotifyService a = new MailAdapter();
+		NotifyService a = new SlackAdapter();
 		NotifyService n = new MailAdapter();
 		a.setCredentials("username");
 		n.setCredentials("email@email.nl");
 		user.addNotifyMedium(n);
+		user.addNotifyMedium(a);
 		Assertions.assertEquals(n.notify("Hello"), "Hello email@email.nl");
-		Assertions.assertEquals(n.notify("Hello"), "slack : Hello for username");
+		Assertions.assertEquals(a.notify("Hello"), "slack : Hello for username");
 	}
 
 	@Test
