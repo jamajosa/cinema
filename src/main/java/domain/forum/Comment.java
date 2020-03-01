@@ -10,5 +10,5 @@ public class Comment {
     public void publish(){
             user.notify("u posted: " + text);
     }
-
+//
 }
