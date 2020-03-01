@@ -2,13 +2,13 @@ package domain.user;
 
 public class Userfactory {
     public User makeUser(String userType,String name){
-        if(userType == "P"){
+        if(userType.equals("P")){
             return new ProductOwner(name);
         }
-        else if(userType == "S"){
+        else if(userType.equals("S")){
             return new ScrumMaster(name);
         }
-        else if(userType == "D"){
+        else if(userType.equals("D")){
             return new Developer(name);
         }
         else{
