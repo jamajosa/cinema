@@ -1,6 +1,6 @@
 package domain.user;
 
 public interface NotifyService {
-     void notify(String notification);
+     String notify(String notification);
      void setCredentials(String credentials);
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public class BacklogItem extends Task{
     private List<Task> activities;
     private Phase currentPhase = new ToDo();
-    //private List<Thread> threads;
+    private List<Thread> threads;
     private Publisher publisher;
 
     public void addActivity(Task t){
@@ -15,9 +15,10 @@ public class BacklogItem extends Task{
         activities.remove(t);
     }
 
-//    public void addThread(Thread t){
-//        threads.add(t);
-//    }
+    public void addThread(Thread t){
+        threads.add(t);
+    }
+
     public void publish(){
         if(this.completed) {
             publisher.notifySubscribers("Backlogitem completed");

@@ -9,8 +9,8 @@ public class MailAdapter implements NotifyService {
       this.email=email;
     }
     @Override
-    public void notify(String notification)
+    public String notify(String notification)
     {
-        ms.printOut(notification,this.email);
+        return ms.printOut(notification,this.email);
     }
 }
