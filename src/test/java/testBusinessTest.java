@@ -34,22 +34,22 @@ class testBusinessTest {
 		User user = factory.makeUser("D","Richard");
 		User user2 = factory.makeUser("S","Olaf");
 		User user3 = factory.makeUser("P","Pieter");
-		Assertions.assertEquals(user3 instanceof ProductOwner,true);
-		Assertions.assertEquals(user2 instanceof ScrumMaster,true);
-		Assertions.assertEquals(user instanceof Developer,true);
+		Assertions.assertTrue(user3 instanceof ProductOwner);
+		Assertions.assertTrue(user2 instanceof ScrumMaster);
+		Assertions.assertTrue(user instanceof Developer);
 	}
 
 	@Test
 	void TestDoesItemStateChangesTest() {
 		BacklogItem backlogitem = new BacklogItem();
 		backlogitem.setCurrentPhase(new ToDo());
-		Assertions.assertEquals(backlogitem.getCurrentPhase() instanceof ToDo, true);
+		Assertions.assertTrue(backlogitem.getCurrentPhase() instanceof ToDo);
 
 		backlogitem.setCurrentPhase(new Doing());
-		Assertions.assertEquals(backlogitem.getCurrentPhase() instanceof ToDo, false);
+		Assertions.assertTrue(backlogitem.getCurrentPhase() instanceof Doing);
 
 		backlogitem.setCurrentPhase(new Done());
-		Assertions.assertEquals(backlogitem.getCurrentPhase() instanceof Done, true);
+		Assertions.assertTrue(backlogitem.getCurrentPhase() instanceof Done);
 	}
 
 	@Test
@@ -66,8 +66,7 @@ class testBusinessTest {
 		);
 
 		BuildResult build = pl.runPipeline();
-		Assertions.assertEquals(build instanceof BuildResult, true);
-		Assertions.assertEquals(build.isStatus(), true);
+		Assertions.assertTrue(build.isStatus());
 	}
 }
 
