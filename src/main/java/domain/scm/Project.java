@@ -9,7 +9,7 @@ public class Project {
 
     private String title;
     private String description;
-    private Board board;
+    private Board board;//
     private List<Pipeline> pipelines;
     private List<User> team;
 
