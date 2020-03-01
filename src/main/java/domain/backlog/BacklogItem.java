@@ -21,7 +21,6 @@ public class BacklogItem extends Task{
     public void publish(){
         if(this.completed) {
             publisher.notifySubscribers("Backlogitem completed");
-            //done
         }
     }
 
