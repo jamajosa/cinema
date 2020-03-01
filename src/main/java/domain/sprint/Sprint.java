@@ -1,5 +1,4 @@
 package domain.sprint;
-
 import domain.backlog.Backlog;
 import domain.pipeline.Pipeline;
 import domain.reporting.BuildResult;
@@ -21,12 +20,9 @@ public class Sprint extends Backlog {
     private Publisher publisher;
     private Review review;
 
-    public void runPipeline(){
+    public boolean runPipeline(){
         BuildResult br = pipeline.runPipeline();
-        if(br.isStatus()){
-            Released r = new Released();
-            this.setState(r);
-        }
+        return br.isStatus();
     }
     public void setState(Stadia state) {
         this.state = state;

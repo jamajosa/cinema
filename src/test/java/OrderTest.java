@@ -1,5 +1,6 @@
 import domain.user.MailAdapter;
 import domain.user.NotifyService;
+import org.junit.jupiter.api.Assertions;
 
 class OrderTest {
 
@@ -7,8 +8,7 @@ class OrderTest {
 	//	//MovieTicket mtn = new MovieTicket(ms,false,1,1);
 //	@Test
 	void test() {
-		NotifyService nf = new MailAdapter();
-
+		Assertions.assertEquals( 12.0 , 12.0);
 	}
 }
 //	@Test
