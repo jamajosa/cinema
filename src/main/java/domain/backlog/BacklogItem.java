@@ -4,7 +4,7 @@ import java.util.List;
 
 public class BacklogItem extends Task{
     private List<Task> activities;
-    private Phase currentPhase;
+    private Phase currentPhase = new ToDo();
     //private List<Thread> threads;
     private Publisher publisher;
 
@@ -22,9 +22,5 @@ public class BacklogItem extends Task{
         if(this.completed == true) {
             publisher.notify();
         }
-    }
-
-    public void setCurrentPhase(Phase p){
-        p = currentPhase;
     }
 }
