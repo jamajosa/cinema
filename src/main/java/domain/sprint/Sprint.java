@@ -1,5 +1,6 @@
 package domain.sprint;
 import domain.backlog.Backlog;
+import domain.backlog.BacklogItem;
 import domain.pipeline.Pipeline;
 import domain.reporting.BuildResult;
 import domain.reporting.Report;

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Backlog {
-    private ArrayList<BacklogItem> items = new ArrayList<BacklogItem>();
+    public ArrayList<BacklogItem> items = new ArrayList<BacklogItem>();
 
     public void addBacklogItem(BacklogItem b){
         items.add(b);

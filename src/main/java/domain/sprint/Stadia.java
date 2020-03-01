@@ -5,7 +5,7 @@ import domain.user.ScrumMaster;
 import java.time.LocalDateTime;
 
 public abstract class Stadia {
-    Sprint context;
+    Sprint context = new Sprint();
     public void setStart(LocalDateTime dt) {
         System.out.println("cannot implement");
     };

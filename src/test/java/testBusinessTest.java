@@ -4,6 +4,10 @@ import domain.backlog.Done;
 import domain.backlog.ToDo;
 import domain.pipeline.*;
 import domain.reporting.BuildResult;
+import domain.sprint.Active;
+import domain.sprint.Finished;
+import domain.sprint.Prepare;
+import domain.sprint.Sprint;
 import domain.user.MailAdapter;
 import domain.user.NotifyService;
 import domain.user.*;
@@ -52,6 +56,7 @@ class testBusinessTest {
 		Assertions.assertTrue(backlogitem.getCurrentPhase() instanceof Done);
 	}
 
+
 	@Test
 	void PipelineRunsTest() {
 		Pipeline pl = new Pipeline();
@@ -67,6 +72,18 @@ class testBusinessTest {
 
 		BuildResult build = pl.runPipeline();
 		Assertions.assertTrue(build.isStatus());
+	}
+
+	@Test
+	void SprintStateTest() {
+		Sprint sprint = new Sprint();
+		sprint.setState(new Prepare());
+		Assertions.assertTrue(sprint.getState() instanceof Prepare);
+		sprint.addBacklogItem(new BacklogItem());
+		Assertions.assertFalse(sprint.items.isEmpty());
+		Assertions.assertEquals(sprint.items.size(),1);
+		sprint.getState().nextState();
+		//Assertions.assertTrue(sprint.getState() instanceof Active);
 	}
 }
 
