@@ -4,10 +4,10 @@ import domain.user.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class testBusinesstest {
+class testBusinessTest {
 
 	@Test
-	void TestDoesTheStatesChangeTest() {
+	void DoesTheStatesChangeTest() {
 		Userfactory factory = new Userfactory();
 		User user = factory.makeUser("D","Richard");
 		NotifyService n = new MailAdapter();
